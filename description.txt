@@ -14,3 +14,6 @@ Any feedback is welcome at the GitHub page.
 
 v0.1
 - Mod created.
+
+v0.1
+- GitHub connected.
