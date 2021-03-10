@@ -1,6 +1,6 @@
 == How To Use ==
 
-- When a consumable item is fully stacked it will turn Endless. Endless items are not consumed when used.
+- When a consumable item is fully stacked it will turn Endless. Endless items are not consumed when used. Manually splitting the stack will revert it.
 
 - Endless buff potions will automatically be reused when their buff expires. This requires that the potion is either in your inventory or portable storage. Mod potions may require the "/endless [potion name]" command to work.
 
