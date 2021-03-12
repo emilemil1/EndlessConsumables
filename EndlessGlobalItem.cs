@@ -24,6 +24,17 @@ namespace EndlessConsumables {
         public override bool ConsumeItem(Item item, Player player)
         {
             bool def = base.ConsumeItem(item, player);
+
+            if (item.consumable) {
+                EndlessConfig config = ModContent.GetInstance<EndlessConfig>();
+
+                if (config.PotionsMax != 0) {
+                    if (item.stack >= config.PotionsMax) {
+                        return true;
+                    }
+                }
+            }
+
             return ItemUtils.IsAtMaxStacks(item) ? false : def;
         }
     }
