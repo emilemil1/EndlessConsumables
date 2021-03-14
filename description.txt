@@ -1,22 +1,7 @@
-== How To Use ==
+== Description ==
 
-- When a consumable item is fully stacked it will turn Endless. Endless items are not consumed when used. Manually splitting the stack will revert it.
+Simply reach maximum stacks and your item will be marked as "(endless)", at which point it will no longer consume stacks when used.
 
-- Endless buff potions will automatically be reused when their buff expires. This requires that the potion is either in your inventory or portable storage (except Void Vault). Mod potions may require the "/endless [potion name]" command to work.
+Additionally any endless buff potions will be automatically refreshed, as long as the potion is either in your inventory or portable storage (except Void Vault).
 
-== About ==
-
-This mod is inspired by the True Endless mod.
-
-Any feedback is welcome at the GitHub page.
-
-== Change Log ==
-
-v0.1
-- Mod created.
-
-v0.1.1
-- GitHub connected.
-
-v0.2
-- Added override for potion max stack.
+More detailed documentation is available at the GitHub page, including ways to get around certain mod consumables not working.

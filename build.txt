@@ -1,5 +1,5 @@
 displayName = Endless Consumables
 author = Ophion
-version = 0.1.1
+version = 0.1.2
 homepage = https://github.com/emilemil1/EndlessConsumables
 includeSource = true

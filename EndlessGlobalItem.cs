@@ -2,22 +2,25 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace EndlessConsumables {
-    public class EndlessGlobalItem : GlobalItem {
+namespace EndlessConsumables
+{
+    public class EndlessGlobalItem : GlobalItem
+    {
         private const string TOOLTIPNAME = "EndlessConsumable_Tooltip";
         private const string TOOLTIPTEXT = " (Endless)";
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            base.ModifyTooltips(item, tooltips);
-
             if (!item.consumable) return;
 
             bool isSet = tooltips[0].text.Contains(TOOLTIPTEXT);
-            
-            if (ItemUtils.IsAtMaxStacks(item) && !isSet) {
+
+            if (Utils.IsAtMaxStacks(item) && !isSet)
+            {
                 tooltips[0].text += TOOLTIPTEXT;
-            } else {
-                tooltips[0].text.Replace(TOOLTIPTEXT,"");
+            }
+            else
+            {
+                tooltips[0].text.Replace(TOOLTIPTEXT, "");
             }
         }
 
@@ -25,17 +28,7 @@ namespace EndlessConsumables {
         {
             bool def = base.ConsumeItem(item, player);
 
-            if (item.consumable) {
-                EndlessConfig config = ModContent.GetInstance<EndlessConfig>();
-
-                if (config.PotionsMax != 0) {
-                    if (item.stack >= config.PotionsMax) {
-                        return true;
-                    }
-                }
-            }
-
-            return ItemUtils.IsAtMaxStacks(item) ? false : def;
+            return Utils.IsAtMaxStacks(item) ? false : def;
         }
     }
 }
