@@ -41,3 +41,5 @@ Repeat the command to revert.
 ### v0.1.2
 - /endless command reworked
 - /autouse command added
+### v0.1.3
+- /endless command can disable consumables

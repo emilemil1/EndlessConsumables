@@ -90,6 +90,8 @@ namespace EndlessConsumables
         {
             foreach (Item item in arr)
             {
+                if (item.consumable == false) continue;
+
                 if ((itemType ? item.type == type : item.buffType == type) && Utils.IsAtMaxStacks(item))
                 {
                     ModItem modItem = ItemLoader.GetItem(item.type);

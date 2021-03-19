@@ -47,11 +47,14 @@ namespace EndlessConsumables
         {
             if (!item.consumable) return true;
 
-            if (endlessWorld.data.overriddenEndlessItems.ContainsKey(item.type) && item.stack >= endlessWorld.data.overriddenEndlessItems[item.type])
+            if (endlessWorld.data.overriddenEndlessItems.ContainsKey(item.type))
             {
-                return true;
+                return item.stack >= endlessWorld.data.overriddenEndlessItems[item.type];
             }
-            return item.stack >= item.maxStack;
+            else
+            {
+                return item.stack >= item.maxStack;
+            }
         }
 
         public static void Log(object msg)
